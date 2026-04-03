@@ -13,9 +13,8 @@ public:
         int i = 0;
 
         while (i < s.size()) {
-            int j = i;
-
             // find delimiter '#'
+            int j = i;
             while (j < s.size() && s[j] != '#') {
                 j++;
             }
