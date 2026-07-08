@@ -3,13 +3,13 @@ public:
     vector<int> sortArray(vector<int>& nums) {
         int n = nums.size();
         for (int i = 1; i < n; i++) {
-            int key = nums[i];
-            int j = i - 1;
-            while (j >= 0 && nums[j] > key) {
-                nums[j + 1] = nums[j];
-                j--;
+            int current = nums[i];
+            int prev = i - 1;
+            while (prev >= 0 && nums[prev] > current) {
+                nums[prev + 1] = nums[prev];
+                prev--;
             }
-            nums[j + 1] = key;
+            nums[prev + 1] = current;
         }
         return nums;
     }
